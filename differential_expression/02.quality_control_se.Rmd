@@ -82,7 +82,7 @@ metrics %>%
     geom_bar(stat = "identity") +
     coord_flip() +
     scale_y_continuous(name = "mln reads") +
-    geom_text(aes(label = floor(total_reads/1e6L)), hjust = 0, nudge_y = 0.5)+
+    geom_text(aes(label = floor(mapped_reads/1e6L)), hjust = 0, nudge_y = 0.5)+
     xlab("sample") + 
     ggtitle("Mapped reads")
 ```
