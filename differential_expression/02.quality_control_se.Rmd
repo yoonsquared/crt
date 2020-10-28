@@ -99,7 +99,7 @@ metrics %>%
                y = mapped_reads_pct, fill = category)) +
         geom_bar(stat = "identity") +
     coord_flip() +
-    geom_text(aes(label = floor(mapped_reads_pct)), hjust = 0, nudge_y = 0.5)+
+    geom_text(aes(label = round(mapped_reads_pct,digits=2)), hjust = 0, nudge_y = 0.5)+
     xlab("sample") + 
     ggtitle("Mapping rate")
 ```
